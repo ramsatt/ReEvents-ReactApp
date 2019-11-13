@@ -33,7 +33,7 @@ class EventForm extends Component {
 
   render() {
     const { cancelFormOpen } = this.props;
-    const { title, eventDate, city, venue, hostedBy } = this.state;
+    const { title, date, city, venue, hostedBy } = this.state;
     return (
       <Segment>
         <Form onSubmit={this.handleFormSubmit} autoComplete="off">
@@ -51,7 +51,7 @@ class EventForm extends Component {
             <input
               name="date"
               onChange={this.handleInputChange}
-              value={eventDate}
+              value={date}
               type="date"
               placeholder="Event Date"
             />

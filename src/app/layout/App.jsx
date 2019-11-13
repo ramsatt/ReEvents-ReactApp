@@ -4,7 +4,7 @@ import NavBar from "../../features/nav/NavBar/NavBar";
 import { Container } from "semantic-ui-react";
 import { Route } from "react-router-dom";
 import { HomePage } from "../../features/Home/HomePage";
-import { EventDeteiledPage } from "../../features/event/EventDetailed/EventDeteiledPage";
+import EventDeteiledPage from "../../features/event/EventDetailed/EventDeteiledPage";
 import { PeopleDashboard } from "../../features/User/PeopleDashboard/PeopleDashboard";
 import { UserDetailedPage } from "../../features/User/UserDetailedPage/UserDetailedPage";
 import { SettingsDashboard } from "../../features/User/Settings/SettingsDashboard";
@@ -22,7 +22,7 @@ class App extends Component {
             <Fragment>
               <NavBar />
               <Container className="main">
-                <Route path="/events" component={EventDashboard} />
+                <Route exact path="/events" component={EventDashboard} />
                 <Route path="/events/:id" component={EventDeteiledPage} />
                 <Route path="/people" component={PeopleDashboard} />
                 <Route path="/profile/:id" component={UserDetailedPage} />
